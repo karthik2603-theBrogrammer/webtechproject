@@ -14,13 +14,13 @@ function Checkout() {
     axios
       .get("/cartcheckout")
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setCheckoutData(res.data);
         setMyFinalPrice(res.data.total_price)
 
       })
       .catch((err) => console.log(err));
-  }, [checkoutData]);
+  }, []);
 
 
   return (

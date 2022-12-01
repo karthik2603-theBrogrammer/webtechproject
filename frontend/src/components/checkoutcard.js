@@ -29,7 +29,7 @@ function Checkoutcard(prop) {
       ) : (
         <div>
           {typeof data == "string" ? (
-            <Order data-aos="zoom-in-up" class = "card" id = "orderNumber"> Order Number :  <span>{data} </span> </Order>
+            <Order data-aos="zoom-in-up" className = "card" id = "orderNumber"> Order Number :  <span>{data} </span> </Order>
           ) : (<CardContainer className = "checkoutParent">
             <CardNest takedata={data} />
           </CardContainer>
