@@ -12,7 +12,7 @@ function Checkout() {
   const [checkoutData, setCheckoutData] = useState(null);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cartcheckout")
+      .get("/cartcheckout")
       .then((res) => {
         // console.log(res.data);
         setCheckoutData(res.data);
