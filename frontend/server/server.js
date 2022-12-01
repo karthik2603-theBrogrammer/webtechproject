@@ -38,6 +38,7 @@ mongodb.MongoClient.connect("mongodb+srv://KarthikNamboori:jEowXTygnO34kkNA@webt
         });
     })
     app.post("/cart",(req,res,next)=>{
+        console.log(req.body)
         projCollection.insertOne(req.body,(err)=>{
             if (err) throw err;
             console.log("Order has been logged to the DataBase!");
