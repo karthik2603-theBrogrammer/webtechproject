@@ -1,0 +1,146 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  /* body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+   */
+  
+  .card {
+    background: #191c29;
+    width: 9em;
+    height: 13em;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 1em;
+    flex-direction: column;
+  }
+  
+  /* .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  } */
+  /* .card:hover:before, .card:hover:after {
+    animation: none;
+    opacity: 0;
+  } */
+  
+  
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #FF8C00	27%, #FFD700 27%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #FF8C00	27%, #FFD700 27%, #4e00c2);
+      opacity: 0;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  .card img{
+    height: 60%;
+    width: 60%;
+    margin: 4px;
+    color: white;
+    border-radius: 8px;
+  }
+  .card h3{
+    font-size: 90%;
+  }
+  .card h2{
+    font-size: 60%;
+    color: white;
+  }
+  #purchase{ 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #4e00c2;
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 0.8em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+ #purchase:hover{
+  background-color: #FFD700;
+  color: #4e00c2;}
+  /* animation: hover 4s ease-in; */
+ /* } */ 
+ #selected{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FFD700;
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 0.8em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #4e00c2;
+
+ }
+#price{
+  font-size: 0.6em;
+}
+#priceSpan{
+  color: #FFD700;
+  font-size: 2em;
+  
+}

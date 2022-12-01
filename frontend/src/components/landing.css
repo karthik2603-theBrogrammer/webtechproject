@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Merriweather:wght@300;400&family=Montserrat:ital,wght@0,100;0,200;1,600&family=Noto+Sans:ital,wght@0,600;1,800&family=Noto+Serif:ital@0;1&family=Open+Sans:ital,wght@0,400;1,500&family=PT+Serif:ital@1&family=Poor+Story&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Work+Sans:ital@0;1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+#vantajs {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  color: #fff !important;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #vantajs {
+    max-height: 100vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p{
+    font-size: 0.3em;
+  }
+}
+@media screen and (max-width: 1000px){
+    #logo-container h1{
+        font-size: 3rem;
+      }
+
+    
+}
+
+#info-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 40%;
+  width: 50%;
+
+  left: 5%;
+  top: 40%;
+}
+#info-para {
+  margin-top: 2%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  color: white;
+}
+span{
+    color: gold;
+}
+#logo-container{
+    position:absolute;
+    top: 5%;
+    left: 4%;
+    font-size: 11vw;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+}

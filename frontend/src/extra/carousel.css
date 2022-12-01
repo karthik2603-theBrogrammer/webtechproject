@@ -1,0 +1,102 @@
+body {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #1c122b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  width: 349px;
+  height: 428px;
+  perspective: 500px;
+  margin: 10% 0 10% 0;
+  transform-style: preserve-3d;
+}
+
+.carousel-card-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 217px;
+  height: 312px;
+  transform: rotateY(calc(var(--offset) * 50deg)) scaleY(calc(1 + var(--abs-offset) * -0.4)) translateZ(calc(var(--abs-offset) * -30rem)) translateX(calc(var(--direction) * -5rem));
+  filter: blur(calc(var(--abs-offset) * 1rem));
+  transition: all 0.3s ease-out;
+}
+
+.carousel-card {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: hsl(280deg, 40%, calc(100% - var(--abs-offset) * 50%));
+  border-radius: 1rem;
+  color: #9CA3AF;
+  text-align: justify;
+  transition: all 0.3s ease-out;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.7em;
+  color: #1F2937;
+}
+
+p, h2 {
+  transition: all 0.3s ease-out;
+  opacity: var(--active);
+}
+
+.nav {
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: unset;
+  border: unset;
+}
+.nav.left {
+  transform: translateX(-100%) translatey(-50%);
+}
+.nav.right {
+  right: 0;
+  transform: translateX(100%) translatey(-50%);
+}
+
+.carousel-app {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  margin: 8em;
+  padding-top: 200px;
+}
+
+.myClass {
+  height: 400px;
+  width: 300px;
+  opacity: 0.9;
+}
+.myClass h2 {
+  font-size: 1.4em;
+  opacity: 1;
+}/*# sourceMappingURL=carousel.css.map */
