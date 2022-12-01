@@ -12,7 +12,7 @@ function Checkout() {
   const [checkoutData, setCheckoutData] = useState(null);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cartcheckout")
+      .get("/cartcheckout")
       .then((res) => {
         // console.log(res.data);
         setCheckoutData(res.data);
@@ -25,7 +25,7 @@ function Checkout() {
 
   return (
     <div>
-      {checkoutData !== null ? (
+      {checkoutData.data !== null ? (
         <div>
           {Object.entries(checkoutData.data).map((element, index) => {
             return <Checkoutcard className = "checkoutParent" key={index}  nftObject={element} />;
