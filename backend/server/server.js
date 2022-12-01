@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.get("/",(req,res)=>{
     res.send("Backend Server fo nftCart.com - Highly Confidential!")
 })
-mongodb.MongoClient.connect(process.env.ATLAS_URI,(err,dbs)=>{
+mongodb.MongoClient.connect("mongodb+srv://KarthikNamboori:jEowXTygnO34kkNA@webtechprojectclass.hkblu6f.mongodb.net/test",(err,dbs)=>{
     console.log("Connected Successfully to the DB Atlas!")
     const db = dbs.db("projDB");
     const projCollection = db.collection("projCollection");
