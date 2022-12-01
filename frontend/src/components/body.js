@@ -32,7 +32,7 @@ export default function Body() {
   useEffect(() => {
     if(submit == true){
       
-      axios.post("/cart",JSON.stringify(dict))
+      axios.post("/cart",dict)
         .then(res => console.log(res))
         .catch(err => console.log(err))
       navigate("/cartcheckout")
