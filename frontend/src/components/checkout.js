@@ -20,12 +20,12 @@ function Checkout() {
 
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [checkoutData]);
 
 
   return (
     <div>
-      {checkoutData.data !== null ? (
+      {checkoutData !== null ? (
         <div>
           {Object.entries(checkoutData.data).map((element, index) => {
             return <Checkoutcard className = "checkoutParent" key={index}  nftObject={element} />;
